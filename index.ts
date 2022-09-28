@@ -173,6 +173,19 @@ class LinkedList<T = any> {
     return -1
   }
   /**
+   * @description 返回此列表的数组形式
+   */
+  getLinkedArray() {
+    let current = this.head
+    let arr = []
+    if (current) arr.push(current.data)
+    while (current.next) {
+      current = current.next
+      arr.push(current.data)
+    }
+    return arr
+  }
+  /**
    * @description 特定位置插入一个新的项
    */
   insert(index: number, data: T) {

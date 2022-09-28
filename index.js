@@ -191,6 +191,20 @@ var LinkedList = /** @class */ (function () {
         return -1;
     };
     /**
+     * @description 返回此列表的数组形式
+     */
+    LinkedList.prototype.getLinkedArray = function () {
+        var current = this.head;
+        var arr = [];
+        if (current)
+            arr.push(current.data);
+        while (current.next) {
+            current = current.next;
+            arr.push(current.data);
+        }
+        return arr;
+    };
+    /**
      * @description 特定位置插入一个新的项
      */
     LinkedList.prototype.insert = function (index, data) {
