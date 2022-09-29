@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    "declaration": true, //用于自动额外生成d.ts 文件
+    "declarationMap": true,//用于生成 d.ts.map 文件
     "experimentalDecorators": true,
     // "target": "ESNext",// 指定ECMAScript目标版本
     "target": "es5",
